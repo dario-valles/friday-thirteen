@@ -1,9 +1,8 @@
-
 // Unlucky Days (20 mins)
 
 // CHALLENGE
 
-// Friday 13th is considered as unlucky day. 
+// Friday 13th is considered as unlucky day.
 // Write a function called `unluckyDays` that calculates how many Friday 13th are in the given year.
 // Your input `year` will be an integer. The function should also return an integer.
 
@@ -12,7 +11,6 @@
 // unluckyDays(2019) =>  2
 // unluckyDays(1998) =>  3
 // unluckyDays(1571) =>  1
-
 
 // TESTING YOUR SOLUTION
 
@@ -25,8 +23,14 @@
 // changes to your forked repo and submit a pull request.
 // Alternatively send an email with your solution to boldireg@tcd.ie
 
-function unluckyDays (year) {
-  // your code here
+function unluckyDays(year) {
+  const date = new Date();
+  let counter = 0;
+  for (let i = 0; i < 12; i++) {
+    date.setFullYear(year, i, 13);
+    date.getDay() === 5 && counter++;
+  }
+  return counter;
 }
 
 module.exports = unluckyDays;
