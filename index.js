@@ -27,8 +27,8 @@ function unluckyDays(year) {
   const date = new Date();
   let counter = 0;
   for (let i = 0; i < 12; i++) {
-    date.setFullYear(year, i, 13);
-    date.getDay() === 5 && counter++;
+    date.setFullYear(year, i, 13); // sets current year and day 13
+    date.getDay() === 5 && counter++; // if day is friday increment
   }
   return counter;
 }
