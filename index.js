@@ -24,13 +24,13 @@
 // Alternatively send an email with your solution to boldireg@tcd.ie
 
 function unluckyDays(year) {
-  const date = new Date();
-  let counter = 0;
+  const date = new Date()
+  let counter = 0
   for (let i = 0; i < 12; i++) {
-    date.setFullYear(year, i, 13); // sets current year and day 13
-    date.getDay() === 5 && counter++; // if day is friday increment
+    date.setFullYear(year, i, 13) // sets current year and day 13
+    date.getDay() === 5 && counter++ // if day is friday increment
   }
-  return counter;
+  return counter
 }
 
 module.exports = unluckyDays;
