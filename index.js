@@ -30,6 +30,7 @@ function unluckyDays(year) {
     date.setFullYear(year, i, 13) // sets current year and day 13
     date.getDay() === 5 && counter++ // if day is friday increment
   }
+  console.log('You are the best around')
   return counter
 }
 
